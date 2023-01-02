@@ -1,3 +1,5 @@
+require('dotenv');
+
 const {
   DB_USER = "",
   DB_PASSWORD = "",
@@ -24,11 +26,11 @@ module.exports = {
     dialect: "postgres"
   },
   production: {
-    username: DB_USER,
-    password: DB_PASSWORD,
-    database: DB_DATABASE,
-    host: DB_HOST,
-    port: DB_PORT,
+    username: "postgres",
+    password: "PGPASSWORD",
+    database: "railway",
+    host: "containers-us-west-161.railway.app",
+    port: "7843",
     dialect: "postgres"
   }
 }
